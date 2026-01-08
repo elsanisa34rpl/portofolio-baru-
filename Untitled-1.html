@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JULE ✨ | Creative Soul</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Quicksand', 'sans-serif'],
+          },
+          colors: {
+            // Sesuai palet: https://colorhunt.co/palette/f2f9ffffcce1e195abfff5d7
+            palette: {
+              100: '#F2F9FF', // Light blue bg
+              200: '#FCCCE1', // Soft pink
+              300: '#E195AB', // Dusty rose
+              400: '#FFF5D7', // Cream
+            }
+          },
+          animation: {
+            'heartbeat': 'heartbeat 1.5s infinite',
+            'floaty': 'floaty 4s ease-in-out infinite',
+            'pop-in': 'popIn 0.6s ease-out forwards',
+          },
+          keyframes: {
+            heartbeat: {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.05)' },
+            },
+            floaty: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            popIn: {
+              '0%': { opacity: 0, transform: 'scale(0.9)' },
+              '100%': { opacity: 1, transform: 'scale(1)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Quicksand -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      scroll-behavior: smooth;
+      background-color: #F2F9FF; /* palette.100 */
+    }
+    .project-card {
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px -5px rgba(230, 149, 171, 0.25); /* dari #E195AB */
+    }
+    .cursor-heart {
+      cursor: url("image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%23E195AB' d='M12,21.35L10.55,20.03C5.4,15.36,2,12.28,2,8.5C2,5.42,4.42,3,7.5,3c1.74,0,3.41,.81,4.5,2.09C13.09,3.81,14.76,3,16.5,3C19.58,3,22,5.42,22,8.5c0,3.78,-3.4,6.86,-8.55,11.53L12,21.35z'/></svg>"), auto;
+    }
+  </style>
+</head>
+<body class="cursor-heart">
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+    <div class="absolute top-20 left-10 text-palette-200 animate-floaty">💖</div>
+    <div class="absolute bottom-32 right-20 text-palette-200 animate-floaty" style="animation-delay: 1s">🌸</div>
+    <div class="absolute top-1/3 right-10 text-palette-300 animate-floaty" style="animation-delay: 2s">🎀</div>
+
+    <div class="container mx-auto max-w-4xl text-center z-10">
+      <div class="inline-block bg-palette-200/30 text-palette-300 px-5 py-2 rounded-full mb-6 font-medium animate-pop-in">
+        ✨ Hi, bestie!
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-pop-in" style="animation-delay: 0.2s">
+        I’m <span class="text-palette-300">JULE</span>
+      </h1>
+      <p class="text-lg text-gray-700 max-w-xl mx-auto mb-10 animate-pop-in" style="animation-delay: 0.4s">
+        A dreamy designer who loves pastels, glitter, and making cute things ✨
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-pop-in" style="animation-delay: 0.6s">
+        <a href="#portfolio" class="bg-palette-300 hover:bg-palette-200 text-white font-semibold py-3 px-8 rounded-full transition-all shadow-lg">
+          💌 See My Work
+        </a>
+        <a href="#contact" class="border-2 border-palette-200 text-palette-300 hover:bg-palette-200/20 font-semibold py-3 px-8 rounded-full transition-all">
+          💕 Say Hi!
+        </a>
+      </div>
+
+      <div class="mt-16 animate-floaty">
+        <div class="w-48 h-48 md:w-60 md:h-60 mx-auto rounded-full bg-gradient-to-br from-palette-200 to-palette-300 p-2">
+          <div class="bg-white w-full h-full rounded-full flex items-center justify-center overflow-hidden border-4 border-white">
+            <div class="text-4xl">👩‍🎨</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 px-6 bg-white">
+    <div class="container mx-auto max-w-5xl">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">My Cute Projects 💖</h2>
+      <div class="w-16 h-1 bg-palette-200 mx-auto rounded-full mb-12"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="project-card bg-palette-100 rounded-2xl p-6 border border-palette-200/30">
+          <div class="bg-palette-200/30 h-48 rounded-xl mb-4 flex items-center justify-center text-palette-300 text-3xl">🍰</div>
+          <h3 class="text-xl font-bold text-gray-800">Pink Bakery App</h3>
+          <p class="text-gray-600 mt-2">Mobile UI for a dreamy cupcake shop!</p>
+        </div>
+        <div class="project-card bg-palette-100 rounded-2xl p-6 border border-palette-200/30">
+          <div class="bg-palette-200/30 h-48 rounded-xl mb-4 flex items-center justify-center text-palette-300 text-3xl">💌</div>
+          <h3 class="text-xl font-bold text-gray-800">Love Letter Generator</h3>
+          <p class="text-gray-600 mt-2">A web app that writes sweet notes for your crush 💕</p>
+        </div>
+        <div class="project-card bg-palette-400 rounded-2xl p-6 border border-palette-200/30">
+          <div class="bg-palette-200/30 h-48 rounded-xl mb-4 flex items-center justify-center text-palette-300 text-3xl">🌸</div>
+          <h3 class="text-xl font-bold text-gray-800">Spring Mood Board</h3>
+          <p class="text-gray-600 mt-2">Pastel aesthetic collection for creatives</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-palette-100">
+    <div class="container mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">About JULE 💗</h2>
+      <div class="bg-white rounded-3xl p-8 shadow-sm border border-palette-200/30">
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Hi! I’m JULE — your friendly neighborhood designer who believes that <span class="text-palette-300 font-semibold">everything is better in pastel</span>! 💖
+        </p>
+        <p class="text-gray-700 text-lg leading-relaxed mt-4">
+          I turn ideas into adorable digital experiences. When I’m not designing, I’m drinking strawberry milk, watching K-dramas, or drawing hearts in my journal. ✨
+        </p>
+        <div class="mt-6 text-4xl">🎀 🍰 💕 🌸 🍓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-white">
+    <div class="container mx-auto max-w-2xl text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Let’s Be Friends! 💕</h2>
+      <p class="text-gray-600 mb-8">Send me a message — I reply with extra sparkles! ✨</p>
+
+      <form class="space-y-5 text-left">
+        <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-xl border border-palette-200/50 focus:outline-none focus:ring-2 focus:ring-palette-200 bg-palette-100">
+        <input type="email" placeholder="Your Email" class="w-full px-5 py-3 rounded-xl border border-palette-200/50 focus:outline-none focus:ring-2 focus:ring-palette-200 bg-palette-100">
+        <textarea placeholder="Your Sweet Message..." rows="4" class="w-full px-5 py-3 rounded-xl border border-palette-200/50 focus:outline-none focus:ring-2 focus:ring-palette-200 bg-palette-100"></textarea>
+        <button type="submit" class="w-full bg-gradient-to-r from-palette-300 to-palette-200 hover:from-palette-200 hover:to-palette-300 text-white font-bold py-3 rounded-xl transition-all shadow-md animate-heartbeat">
+          Send with Love 💖
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-palette-300 text-white py-8 px-6">
+    <div class="container mx-auto text-center">
+      <div class="text-2xl font-bold mb-2">JULE ✨</div>
+      <p class="text-palette-100">Making the internet cuter, one pixel at a time.</p>
+      <div class="mt-4 flex justify-center space-x-5 text-palette-100">
+        <a href="#" class="hover:text-white text-xl">📸</a>
+        <a href="#" class="hover:text-white text-xl">📱</a>
+        <a href="#" class="hover:text-white text-xl">🎨</a>
+        <a href="#" class="hover:text-white text-xl">💬</a>
+      </div>
+      <p class="mt-6 text-palette-100 text-sm">© 2026 JULE. All rights sparkled.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+ 
+ 
