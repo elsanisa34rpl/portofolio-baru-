@@ -609,7 +609,7 @@
             <div class="about-grid">
                 <div class="profile-image">
                     <!-- Ganti URL_FOTO_KAMU dengan link foto medali kamu setelah diupload -->
-                    <img src="IMG_2975 (1).png" alt="Elsa Ghina" onerror="this.style.display='none'; this.parentElement.innerHTML='🤖'">
+                    <img src="URL_FOTO_KAMU" alt="Elsa Ghina" onerror="this.style.display='none'; this.parentElement.innerHTML='🤖'">
                 </div>
                 <div class="about-text">
                     <h3>Hello! I'm Elsa Ghina</h3>
